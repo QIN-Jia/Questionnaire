@@ -1,0 +1,28 @@
+{
+  "name": "js_mongodb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "init": "node init.js",
+    "start": "node app.js",
+    "test": "mocha *.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "bulma": "^0.8.0",
+    "cors": "^2.8.5",
+    "expect": "^24.9.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mocha": "^6.2.2",
+    "mongoose": "^5.7.7",
+    "superagent": "^5.1.2",
+    "supertest": "^4.0.2",
+    "validator": "^12.0.0",
+    "xss": "^1.0.6"
+  }
+}

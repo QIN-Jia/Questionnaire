@@ -1,0 +1,69 @@
+.wrapper {
+    padding: 20px;
+}
+
+.add-option {
+    width: 75%;
+}
+
+.surveys {
+    display: flex;
+}
+
+.survey {
+    width: 50%
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.option {
+    border: 1px solid black;
+    min-width: 20%;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 1em;
+
+    margin-bottom: 25px;
+
+    font-size: 200%;
+}
+
+.img {
+    width: 50px; 
+    height: 200px;
+}
+
+.option-chosen {
+    background-color: green;
+    color: white;
+}
+
+.option:hover {
+    border: 1px solid green;
+    box-shadow: 1px 1px 3px green;
+}
+
+.navbar {
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+}
+
+.danger {
+    color: crimson;
+}
+
+@media (max-width: 750px) {
+    .options {
+        flex-direction: column;
+    }
+
+    .option {
+        width: 75%;
+    }
+}
