@@ -14,14 +14,16 @@ C'est une application de questionnaire qui est réalisée par JavaScript. Cela p
 
 ​	• React
 
-#### Commandes d'installation
+#### Commandes d'installation (Assuez que vous avez bien installé Node.js et MongoDB)
+
+##### Téléchargement le projet sur Github
 
 ```
 git clone https://github.com/QIN-Jia/Questionnaire.git
 cd Questionnaire-master
 ```
 
-##### 	Côte Serveur
+##### 	Côte Serveur (dans le dossier "server")
 
 ```
 cd server
@@ -52,7 +54,7 @@ node app.js
 
 ##### 	
 
-##### 	Côte Client
+##### 	Côte Client (dans le dossier "web")
 
 ```
 cd ..
