@@ -141,6 +141,15 @@ app.get("/survey/:surveyId", async (req, res) => {
     }
 })
 
+app.get("/answers", async(req, res) => {
+    try {
+        const answers = await Answer.find({})
+        res.send(answers)
+    } catch (err) {
+        res.status(400).send(err)
+    }
+})
+
 app.post("/answer", auth, async (req, res) => {
     const {surveyId, answers} = req.body
     try {

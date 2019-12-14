@@ -219,6 +219,37 @@ describe('POST /answer', () => {
         expect(answer).toBeTruthy()
         expect(answer.userId.toString()).toEqual(user._id.toString())
     })
+
+})
+
+describe('GET /answers', () => {
+
+    it("should get all answers", async() => {
+        const user = new User(testUser)
+        await user.save()
+
+        const token = await user.generateToken()
+        
+        const survey = new Survey({
+            userId: user._id,
+            ...testSurvey
+        })
+        await survey.save()
+
+        const answer = new Answer({
+            userId: user._id,
+            surveyId: survey._id,
+            ...testAnswer
+        })
+        await answer.save()
+
+        const answers = (await request(app).get("/answers")
+                .expect(200)).body
+
+        expect(answers).toBeTruthy()
+        expect(answers.length).toEqual(1)
+        expect(answers[0]._id.toString()).toEqual(answer._id.toString())
+    })
 })
 
 describe('GET /surveys', () => {
@@ -236,8 +267,8 @@ describe('GET /surveys', () => {
             .expect(200)).body
 
         expect(surveys).toBeTruthy()
-        expect(surveys.length).toEqual(1)
-        expect(surveys[0]._id.toString()).toEqual(survey._id.toString())
+        expect(surveys.length).toEqual(3)
+        expect(surveys[2]._id.toString()).toEqual(survey._id.toString())
     })
 })
 

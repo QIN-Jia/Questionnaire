@@ -9,6 +9,7 @@ import UserContext from "./components/UserContext"
 import Editor from './components/Editor'
 import Answer from "./components/Answer"
 import Navbar from './components/Navbar'
+import ResAnswers from './components/ResAnswers'
 
 
 const AppRouter = () => {
@@ -57,6 +58,10 @@ const AppRouter = () => {
 
                         <Route exact path="/answer/:surveyId">
                             <Answer />
+                        </Route>
+
+                        <Route path="/answers">
+                            <ResAnswers />
                         </Route>
 
                         <Route>
